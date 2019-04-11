@@ -1,0 +1,51 @@
+//
+// Demo9 Stylesheets
+//
+
+
+
+
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+// 1: Demo Config
+@import "config";  // demo level framework config override
+
+// 2: Framework Config
+@import "../../../framework/config"; // framework config
+
+// 3: Bootstrap Include
+@import "../../../framework/core/bootstrap/bootstrap.scss";
+
+// 4: Material Angular
+@import "../../../framework/angular-material";
+@import "../../../framework/core/material-angular/include";
+
+// 5: Framework Include
+@import "../../../framework/include"; 
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+// 6: Demo Configs
+@import "header/config";
+@import "aside/config";
+@import "footer/config";
+
+
+// 7: Demo Includes
+@import "base/base";
+
+@import "header/base";
+@import "header/brand";
+@import "header/topbar";
+@import "header/menu";
+
+@import "header/base-mobile";
+
+@import "aside/base";
+@import "aside/menu";
+
+@import "content/base";
+
+@import "footer/base";

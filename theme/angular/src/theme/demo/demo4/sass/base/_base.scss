@@ -1,0 +1,183 @@
+//
+// Base
+//
+
+
+
+
+body {
+	background-color: $kt-page-body-bg-color;
+	background-position: auto top;
+	background-repeat: no-repeat;
+}
+
+// Subheader
+.kt-subheader {
+	padding: kt-get($kt-page-padding, desktop) 0 !important;
+	height: 140px;
+
+	.kt-aside--enabled & {
+		margin-left: kt-get($kt-page-padding, desktop);
+	}
+
+	// Main 
+	.kt-subheader__main {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+		// Light style
+		.kt-subheader--transparent & {
+			// Title
+			.kt-subheader__title {
+				font-size: 1.8rem;
+				margin-bottom: 0.5rem;
+				color: #fff;
+			}
+
+			// Desc
+			.kt-subheader__desc {
+				font-size: 1.2rem;
+				color: rgba(#fff, 0.5);
+			}
+
+			// Breadcrumbs
+			.kt-subheader__breadcrumbs {
+				.kt-subheader__breadcrumbs-home {
+					> i {
+						color: rgba(#fff, 0.6);
+					}
+
+					&:hover {
+						> i {
+							color: #fff;
+						}
+					}
+
+					&.kt-subheader__breadcrumbs-home--active {
+						> i {
+							color: #fff;
+						}
+					}
+				}
+
+				.kt-subheader__breadcrumbs-link {
+					color: rgba(#fff, 0.7);
+
+					&:hover {
+						color: #fff;
+					}
+
+					&.kt-subheader__breadcrumbs-link--active {
+						color: #fff;
+					}
+				}
+
+				.kt-subheader__breadcrumbs-separator {
+					&:after {
+						background: rgba(#fff, 0.6);
+					}
+				}
+			}
+		}
+	}
+
+	// Toolbar
+	.kt-subheader__toolbar {
+		// Primary button
+		.btn.kt-subheader__btn-secondary {
+			height: auto;
+			padding: 1.5rem 2rem;
+			border: 0;
+			background-color: rgba(#fff, 0.1);
+			color: rgba(#fff, 0.8);
+
+			@include kt-rounded {
+				border-radius: $kt-border-radius;
+			}
+
+			&:hover,
+			&:active,
+			&.active,
+			.show &,
+			&:focus {
+				border: 0;
+				background-color: rgba(#fff, 0.3);
+				color: #fff;
+			}
+		}
+
+		// Options button
+		.btn.kt-subheader__btn-options {
+			height: auto;
+			padding: 1.5rem 2rem; 
+
+			@include kt-rounded {
+				border-radius: $kt-border-radius;
+			}
+		}
+	}	
+}
+
+// Desktop(1024px and above)
+@include kt-desktop() {
+	// Fixed
+	body.kt-header--fixed.kt-header--minimize {
+		//transition: padding-top 0.3s ease;
+		padding-top: kt-get($kt-header-config, base, desktop, fixed, height);
+	}
+}
+
+// Page fixed mode(above $kt-page-container-width)
+@include kt-page-fixed-mode {
+	// Page container
+	.kt-container {
+		width: $kt-page-container-width !important;
+	}
+
+	// Page fluid width mode
+	.kt-page--fluid {
+		.kt-container {
+			width: auto !important;
+			margin: 0 $kt-page-fluid-container-padding;
+    		flex-grow: 1;
+			padding: 0;
+		} 
+	}	
+}
+
+// Page fluid mode(below $kt-page-container-width)
+@include kt-page-fluid-mode {
+	// Page container
+	.kt-container {
+		flex-grow: 1;
+		width: 100% !important;
+		padding: 0 kt-get($kt-page-padding, desktop);
+	}
+}
+
+// Tablet & mobile mode(1024px and below)
+@include kt-tablet-and-mobile() {
+	// Subheader
+	.kt-subheader {
+		height: auto;
+	}
+
+	// Page container
+	.kt-container {
+		padding: 0 kt-get($kt-page-padding, mobile);
+	}
+
+	// Page wrapper
+	.kt-wrapper {
+		// Fixed Header
+		.kt-header-mobile--fixed & {
+			padding-top: kt-get($kt-header-config, base, mobile, self, default, height);
+		}
+	}
+
+	// Subheader
+	.kt-subheader {
+		padding: kt-get($kt-page-padding, mobile) 0 !important;
+	}
+}

@@ -1,0 +1,351 @@
+//
+// Invoice 1
+//
+
+
+
+
+// Include framework config
+@import "../../../framework/config";
+
+// Include demo config
+@import "sass/config.scss";
+
+.kt-invoice-1 {
+	.kt-invoice__wrapper {
+	    overflow: hidden; 	                       
+	            
+	    .kt-invoice__head {
+	        background-size: cover;
+	        background-repeat: no-repeat;	        	  
+
+	       	.kt-invoice__container {
+	        	padding-left: 5rem;
+	        	padding-right: 5rem;
+
+		        &.kt-invoice__container--centered {
+		        	width: 70%;
+		        	margin: 0 auto;	
+		        	padding: 0;	        		
+		        } 
+
+		        .kt-invoice__logo {
+		        	display: flex;	
+		        	justify-content: space-between;	        	
+		        	padding-top: 10rem;
+
+		        	> a {		        		 
+		        		text-decoration: none;
+
+		        		> h1 {
+		        			font-weight: 700;
+		        			font-size: 2.7rem;	
+		        			color: #fff;	        				
+		        		}
+
+		        		&:last-child {
+		        			text-align: right;
+		        		}
+
+		        		&:first-child {
+		        			vertical-align: top;
+		        		}
+		        	}	        		                  
+		        }
+
+		        .kt-invoice__desc {
+		            text-align: right;
+		            display: block;
+		            padding: 1rem 0 4rem 0;	
+		            color: lighten(kt-brand-color(), 23%);
+
+		            > span {
+		            	display: block;
+		            }
+		        }
+
+		        .kt-invoice__items {
+		            display: flex;
+		        	width: 100%;		        		 		        		
+		        	padding: 5rem 0 6rem 0;		        	 
+		        	border-top: 1px solid lighten(kt-brand-color(), 5%);
+
+		            .kt-invoice__item {
+		            	flex: 1;
+		            	overflow: hidden;
+		            	color: #fff;
+
+		            	.kt-invoice__subtitle {
+		            		font-weight: 500;
+		            		padding-bottom: 0.5rem;
+		            	}
+
+		            	.kt-invoice__text {
+		            		color: lighten(kt-brand-color(), 23%);
+		            	}		            		
+
+		            	> span {
+		            		display: block;
+		            	}		            		             		
+		            }
+		        }
+		    }    
+	    }
+
+	    .kt-invoice__body {
+	        padding: 6rem 5rem 0 5rem;	        	 
+
+	        &.kt-invoice__body--centered {
+	        	width: 70%;
+	        	margin: 0 auto;	
+	        	padding: 6rem 0 0 0;  
+	        }
+
+	        table {		        	
+	        	thead {
+		        	tr {
+		        		th {
+		        			padding: 1rem 0 0.5rem 0;
+		        			border-top: none;	
+		        			color: kt-base-color(label, 2);
+
+		        			&:not(:first-child) {
+		        				text-align: right;
+		        			}        				
+		        		}
+		        	}
+		        }
+
+		        tbody {
+		        	tr {
+		        		td {
+		        			padding: 1rem 0 1rem 0;			        			
+		        			border-top: none;
+		        			font-weight: 700;
+		        			font-size: 1.1rem;
+		        			color: kt-base-color(label, 3);
+
+		        			&:not(:first-child) {
+		        				text-align: right;	        					 
+		        			}
+
+		        			&:last-child {
+								color: #FE21BE;								
+		        				font-size: 1.2rem;
+		        			}	
+		        		}
+
+		        		&:first-child td{
+		        			padding-top: 1.8rem;
+		        		}
+		        	}
+		        }
+		    }        		
+	    }
+
+	    .kt-invoice__footer {
+	        margin-top: 7rem; 
+	        background-color: kt-base-color(grey, 1);
+
+	        .kt-invoice__container {
+		        display: flex;		
+		        justify-content: space-between;        	 	        	 
+		        padding: 5rem 0 6rem 0;
+
+		        &.kt-invoice__container--centered {
+		        	width: 70%;		        	 
+		        	margin: 0 auto;
+		        }
+
+		        .kt-invoice__content {
+					font-weight: 400;	
+					font-size: 1.1rem;						     		 
+
+		        	.kt-invoice__price {
+		        		font-size: 1.9rem;
+		        		font-weight: 700;	        			    	
+		        	}
+
+		        	> span {
+			            display: block;
+			            display: flex;
+		        		width: 100%;
+		        		color: kt-base-color(label, 3);		        			 
+		        		padding-bottom: 1rem;
+
+		        		> span {
+							flex: 1;							 
+							font-weight: 400;  
+
+							&:first-child {		        			 
+								color: kt-base-color(label, 3);
+								font-weight: 500; 
+							}
+
+		        			&:last-child {
+		        				text-align: right;
+		        				font-size: 1rem;							 
+		        			}		        				 
+		        		}
+
+		        		&:first-child {		        			 
+			        		color: kt-base-color(label, 2);
+			        	}
+
+			        	> span:last-child {			        			 
+							color: kt-base-color(label, 2);
+							font-weight: 500; 							
+				        }	
+			        }
+
+			        &:first-child {
+		        		width: 35%; 
+		        	}			        
+
+		        	.kt-invoice__price {
+						color: #FE21BE !important;
+						font-weight: 700 !important;
+				    }	
+		        }
+
+		        .kt-invoice__content:last-child {
+		        	span {
+		        		text-align: right;
+		        		display: block;		        		
+		        	}		        	 
+		        }
+
+		        .kt-invoice__content:not(:first-child) {
+			        > span {			        			 
+						color: kt-base-color(label, 3);
+						font-weight: 500;
+				    }
+			    }
+		    }
+	    }	         
+	}                
+} 
+
+@include kt-mobile() {
+    .kt-invoice-1 {
+    	.kt-invoice__wrapper {
+			.kt-invoice__head {
+				.kt-invoice__container {
+			        width: 100% !important; 
+			        padding: 0 2rem 0 2rem;	
+
+			        &.kt-invoice__container--centered {
+			        	padding: 0 2rem 0 2rem;		        		
+			        } 
+
+			        .kt-invoice__logo {
+			        	display: flex;
+  						flex-direction: column;
+			        	padding-top: 4rem;
+
+			        	> a {
+			        		width: 100%;
+			        		display: block;			        		
+
+		        			&:last-child {
+		        				padding-top: 1rem;
+		        				text-align: left; 
+		        			}
+			        	}	
+			        }
+
+			        .kt-invoice__desc {
+			        	text-align: left;
+			        	padding-bottom: 2rem;			        		
+			        } 
+
+			        .kt-invoice__items {
+			        	padding: 2rem 0 2rem 0;
+			        	display: flex;
+  						flex-direction: column;
+
+			        	.kt-invoice__item {
+			        		width: 100%;
+			        		display: block;
+			        		padding-bottom: 2rem;
+
+			        		&:not(:first-child) {
+			        			padding-left: 0;	        					 
+			        		}
+			        	}			        			
+			        } 		        	       	 
+			    }	
+			}
+
+			.kt-invoice__body {
+		        width: 100% !important;
+		        padding: 3rem 2rem 0 2rem;	
+
+		        	&.kt-invoice__body--centered {
+		        		padding: 3rem 2rem 0 2rem;  
+		        	}
+
+		        table {
+			        thead {
+			        	tr {
+			        		th {
+			        			&:not(:first-child) {
+			        				padding-right: 0.7rem;
+			        			} 
+
+			        			&:last-child {
+			        				padding-right: 0;
+			        			}       				
+			        		}
+			        	}
+			        }
+
+			        tbody {
+			        	tr {	        			 
+
+			        		td {	
+			        			&:not(:first-child) {
+			        				padding-right: 0.7rem;      					 
+			        			}
+
+			        			&:last-child {
+			        				padding-right: 0;
+			        			} 
+			        		}			        			 
+			        	}
+			        }
+			    } 			               	 
+		    }
+
+		    .kt-invoice__footer {
+		        margin-top: 2rem;
+
+			    .kt-invoice__container {
+			        width: 100%; 	
+			        padding: 4rem 2rem 4rem 2rem;
+
+			        &.kt-invoice__container--centered {
+			        	width: 100%;       		 
+			        }
+
+			        .kt-invoice__content {
+			        	width: 100%;
+				        display: block;
+
+				        &:first-child {		        				 
+			        		width: 100%; 
+			        	}
+
+			        	&:last-child {
+			        		padding-top: 2rem;
+			        		text-align: left;
+			        	}
+			       	}	
+			    }
+			}		 		
+		}
+	}
+}   
+ 
+
+ 

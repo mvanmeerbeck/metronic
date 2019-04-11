@@ -1,0 +1,214 @@
+//
+// Pricing Tables 3
+//
+
+
+
+
+// Include framework config
+@import "../../../framework/config";
+
+// Include demo config
+@import "sass/config.scss";
+
+// Base
+@mixin kt-pricing-3-base() {
+ 	.kt-pricing-3 {
+ 		padding: 5.71rem 0 5.71rem 0;  		  
+
+		&.kt-pricing-3--fixed {
+			width: 75%;			
+			margin: 0 auto;			 
+		}
+
+		.kt-pricing-3__items {
+			width: 100%; 			 		        
+			text-align: center;				
+			box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.08);
+					
+			.kt-pricing-3__item {
+
+				.kt-pricing-3__wrapper {
+					padding: 4.2rem 1rem;			      
+					text-align: center;					 	
+				 
+				    .kt-pricing-3__title {
+				      	font-size: 1.3rem;      
+				    }
+
+					.kt-pricing-3__price {
+					    border-radius: 1.07rem;			       
+					    margin-top: 2.83rem;
+					    display: inline-block;			       	
+					    font-size: 1.8rem;
+					    font-weight: 500;
+					    padding: 0.83rem 1.43rem 0.83rem 1.43rem;	
+
+					    &.kt-pricing-3__price--padding {
+					    	padding: 1.4rem 1.43rem 1.4rem 1.43rem;
+					    }
+
+						.kt-pricing-3__label {
+						    font-size: 1.5rem;
+						    vertical-align: 33%;
+						}					   
+
+						.kt-pricing-3__number {
+						    font-size: 2.64rem;
+						}
+
+						.kt-pricing-3__text {
+						    font-size: 1.07rem;
+						    vertical-align: 40%;
+						}						     
+					}						 		      		
+					 
+					.kt-pricing-3__description {
+					    text-align: center;	
+					    font-size: 0.96rem;
+					    display: inline-block;
+					    margin-top: 2.85rem;			      	
+
+					    > span {
+					    	display: block;
+
+						    &:nth-child(1) {			      	
+						        letter-spacing: 0.01rem;			      		
+						    }	
+						}  	      	
+					}
+
+					.kt-pricing-3__btn {
+					    margin: 2.83rem auto 0 auto;
+
+					    > .btn {
+							padding: 0.8rem 3.6rem 0.8rem 3.6rem; 								 
+						}
+				    }
+				}
+
+				
+
+				&.kt-pricing-3__item--focus {
+					margin-top: -3rem;
+					margin-bottom: -3rem;
+
+					.kt-pricing-3__wrapper {
+						padding: 7rem 1rem;	
+						
+						.kt-pricing-3__price {
+							background-color: lighten( #5d78ff, 1%);							    
+						}
+					}	 					 
+				}	
+			}   	
+		}			 
+ 	} 	 
+ 	 
+ 	@include kt-minimal-desktop() {
+ 		.kt-pricing-3 {
+ 			&.kt-pricing-3--fixed {
+				width: 90%;			
+				margin: 0 auto;			 
+			}	 
+	 	}
+ 	} 	 
+
+ 	@include kt-tablet-and-mobile() {
+ 		.kt-pricing-3 {
+ 			padding: 2.14rem 0 2.14rem 0;
+
+ 			&.kt-pricing-3--fixed {
+				width: 100%;
+				margin: 0 auto;	
+
+			 	.kt-pricing-3__items {
+					.kt-pricing-3__item {
+						.kt-pricing-3__wrapper {
+					     	padding: 3rem 1rem;				     	
+						}
+
+						&.kt-pricing-3__item--focus {
+							margin-top: 0;
+							margin-bottom: 0;
+
+							.kt-pricing-3__wrapper {
+								padding: 3rem 1rem;
+							}
+						}      	 	    	 
+				  	}
+				}  	
+			}		  	
+		}	 	 
+ 	} 	 
+}
+
+// Skin
+@mixin kt-pricing-3-skin() {
+	.kt-pricing-3 {
+		.kt-pricing-3__items {
+			.kt-pricing-3__item {
+				.kt-pricing-3__wrapper {
+				    .kt-pricing-3__title {
+				    	color: kt-base-color(label, 2);
+				    }
+				     
+					.kt-pricing-3__price {
+						background-color: #FCFCFE;
+						color: kt-base-color(label, 2);
+
+					    .kt-pricing-3__label {
+					    	color: kt-base-color(label, 2);
+				     	}
+				     	 
+
+				     	.kt-pricing-3__text {
+				     		color: kt-base-color(label, 2);
+				        }			        
+					}
+
+					.kt-pricing-3__description {
+					    color: kt-base-color(label, 2);
+					}
+				}				
+
+				&.kt-pricing-3__item--focus {
+
+					.kt-pricing-3__wrapper {
+						.kt-pricing-3__btn {
+					    	> .btn {
+							 	&:hover {
+							 		color: #fff;
+							 		background-color: darken(kt-state-color(brand, base), 1%);
+							 		border: 1px solid darken(kt-state-color(brand, base), 1%);
+							 	} 						 
+							}
+				    	}
+					}
+
+					.kt-pricing-3__price {
+						background-color: #756ECD;
+
+						.kt-pricing-3__label {
+						    color: #C4C2FF; 
+						}			      	 
+
+						.kt-pricing-3__text {
+						    color: #C4C2FF;  
+						}
+				    }  		
+
+				    .kt-pricing-3__description {
+					    color: #C4C2FF;
+					}				 	  						 			     	 			     
+			    }
+			}		
+		}	 
+	}	 
+}
+
+// Build Base
+@include kt-pricing-3-base();
+
+// Build Skin
+@include kt-pricing-3-skin();

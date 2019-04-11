@@ -1,0 +1,11 @@
+//
+// Scroll
+//
+
+
+
+// Skin
+@include kt-perfect-scrollbar-ver-size($kt-custom-scroll-size);
+@include kt-perfect-scrollbar-hor-size($kt-custom-scroll-size);
+
+@include kt-perfect-scrollbar-skin($kt-scroll-color);

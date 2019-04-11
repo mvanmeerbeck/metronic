@@ -1,0 +1,67 @@
+//
+// Demo Config
+//
+
+
+
+
+// Layout
+$kt-aside-default-width: 255px;
+$kt-aside-minimize-width: 70px;
+$kt-aside-offcanvas-width: 255px;
+
+$kt-page-padding: (
+	desktop: 25px,
+	mobile: 15px
+);
+
+// Brand Color
+$kt-state-colors: (
+    // Metronic states
+    brand: (
+        base: #5d78ff,
+        inverse: #ffffff
+    ),
+    light: (
+        base: #ffffff,
+        inverse: #282a3c 
+    ),
+    dark: (
+        base: #282a3c,
+        inverse: #ffffff 
+    ),
+
+    // Bootstrap states
+    primary: (
+        base: #5867dd,
+        inverse: #ffffff
+    ),
+    success: (
+        base: #0abb87, //1dc9b7,
+        inverse: #ffffff
+    ),
+    info: (
+        base: #5578eb,
+        inverse: #ffffff
+    ),
+    warning: (
+        base: #ffb822,
+        inverse: #111111
+    ),
+    danger: (
+        base: #fd397a,
+        inverse: #ffffff
+    )    
+);
+
+// Layout Skins
+$kt-layout-skins: (
+	dark: #1e1e2d,
+	light: #ffffff
+);
+
+// content bg color
+$kt-content-bg-color: #f2f3f8;
+
+// Border Radius
+$kt-border-radius: 4px;

@@ -1,0 +1,26 @@
+//
+// Content Config
+//
+
+
+
+$kt-subheader-config: (
+	fixed: (
+		height: 54px
+	),
+
+	style: (
+		light: (
+			space: (
+				desktop: 20px,
+				mobile: 10px
+			)
+		),
+		solid: (
+			space: (
+				desktop: 10px,  
+				mobile: 2px				
+			)
+		)
+	)
+);

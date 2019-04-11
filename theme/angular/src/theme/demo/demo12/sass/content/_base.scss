@@ -1,0 +1,37 @@
+//
+// Content
+//
+
+
+
+// Content
+.kt-content {
+	padding: kt-get($kt-page-padding, desktop);
+
+	// Subheader enabled
+	.kt-subheader--enabled.kt-subheader--transparent:not(.kt-subheader--fixed) & {
+		padding-top: 0;
+	}
+}
+
+@include kt-desktop {
+	// Content
+	.kt-content {
+		// Footer fixed
+		.kt-footer--fixed & {
+			padding-bottom: kt-get($kt-footer-config, self, fixed, height);
+		} 
+	}
+}
+
+@include kt-tablet-and-mobile {
+	// Content
+	.kt-content {
+		padding: kt-get($kt-page-padding, mobile);
+
+		// Subheader enabled
+		.kt-subheader--enabled.kt-subheader--transparent & {
+			padding-top: 0;
+		}
+	}
+}

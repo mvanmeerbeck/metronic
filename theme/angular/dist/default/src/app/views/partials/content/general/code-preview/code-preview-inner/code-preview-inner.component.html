@@ -1,0 +1,32 @@
+
+<h3 *ngIf="title">{{title}}</h3>
+
+<ng-content *ngIf="htmlCode"></ng-content>
+<br />
+
+<ngb-tabset>
+	<ngb-tab *ngIf="htmlCode">
+		<!-- HTML sample code -->
+		<ng-template ngbTabTitle>HTML</ng-template>
+		<ng-template ngbTabContent>
+				<pre class="language-html"><code class="language-html" [textContent]="htmlCode"></code></pre>
+		</ng-template>
+		<!-- /HTML sample code -->
+	</ngb-tab>
+	<ngb-tab *ngIf="tsCode">
+		<!-- Typescript sample code -->
+		<ng-template ngbTabTitle>Typescript</ng-template>
+		<ng-template ngbTabContent>
+			<pre class="language-typescript"> <code class="language-typescript" [textContent]="tsCode"></code></pre>
+		</ng-template>
+		<!-- /Typescript sample code -->
+	</ngb-tab>
+	<ngb-tab *ngIf="scssCode">
+		<!-- SCSS sample code -->
+		<ng-template ngbTabTitle>SCSS</ng-template>
+		<ng-template ngbTabContent>
+			<pre class="language-css"> <code class="language-css" [textContent]="scssCode"></code></pre>
+		</ng-template>
+		<!-- /SCSS sample code -->
+	</ngb-tab>
+</ngb-tabset>

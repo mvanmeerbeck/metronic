@@ -1,0 +1,70 @@
+//
+// Demo Config
+//
+
+
+
+
+// Framework 
+
+// Brand Color
+$kt-state-colors: (
+    // Metronic states
+    brand: (
+        base: #2c77f4,
+        inverse: #ffffff
+    ),
+    light: (
+        base: #ffffff,
+        inverse: #282a3c 
+    ),
+    dark: (
+        base: #282a3c,
+        inverse: #ffffff 
+    ),
+
+    // Bootstrap states
+    primary: (
+        base: #5867dd,
+        inverse: #ffffff
+    ),
+    success: (
+        base: #1dc9b7,
+        inverse: #ffffff
+    ),
+    info: (
+        base: #5578eb,
+        inverse: #ffffff
+    ),
+    warning: (
+        base: #ffb822,
+        inverse: #111111
+    ),
+    danger: (
+        base: #fd397a,
+        inverse: #ffffff
+    )    
+);
+
+// Global rounded border mode
+$kt-rounded: false;
+
+// Border Radius
+$kt-border-radius: 0;
+
+// Layout
+$kt-aside-default-width: 250px;
+$kt-aside-minimize-width: 78px;
+$kt-aside-offcanvas-width: 250px;
+
+$kt-page-padding: (
+	desktop: 25px,
+	mobile: 15px
+);
+
+// Brand Color
+$kt-brand-inverse-color: #ffffff;
+$kt-brand-secondary-color: #db1430;
+
+// Content bg color
+$kt-content-bg-color: #f2f3f8;

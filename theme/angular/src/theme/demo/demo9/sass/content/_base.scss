@@ -1,0 +1,34 @@
+//
+// Content
+//
+
+
+
+
+@include kt-desktop {
+	// Content
+	.kt-content {
+		padding: kt-get($kt-page-padding, desktop) 0 0 0;
+
+		// Subheader enabled
+		.kt-subheader--enabled.kt-subheader--transparent:not(.kt-subheader--fixed) & {
+			padding-top: 0;
+		}
+			
+		// Fixed footer
+		.kt-footer--fixed & {
+			padding-bottom: kt-get($kt-footer-config, self, fixed, height);
+		} 
+	}
+}
+
+@include kt-tablet-and-mobile {
+	.kt-content {
+		padding: kt-get($kt-page-padding, mobile) 0 0 0;
+
+		// Subheader enabled
+		.kt-subheader--enabled.kt-subheader--transparent & {
+			padding-top: 0;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+//
+// Separator
+//
+
+
+
+
+.kt-separator {
+    height: 0;
+    margin: 20px 0;
+    border-bottom: 1px solid kt-base-color(grey, 2);
+
+    &.kt-separator--dashed {
+        border-bottom: 1px dashed kt-base-color(grey, 2);
+    }
+
+    // Border
+    &.kt-separator--border-solid {
+        border-bottom: 1px solid kt-base-color(grey, 2);
+    }
+
+    &.kt-separator--border-dashed {
+        border-bottom: 1px dashed kt-base-color(grey, 2);
+    }
+
+    &.kt-separator--border-2x {
+        border-bottom-width: 2px; 
+    }
+
+    // Sizing
+    &.kt-separator--space-xs {
+        margin: 0.5rem 0;
+    }
+    &.kt-separator--space-sm {
+        margin: 1rem 0;
+    }
+
+    &.kt-separator--space-md {
+        margin: 2rem 0;
+    }
+
+    &.kt-separator--space-lg {
+        margin: 2.5rem 0;
+    }
+
+    &.kt-separator--space-xl {
+        margin: 3rem 0;
+    }
+
+    &.kt-separator--md {
+        margin: 30px 0;
+    }
+
+    &.kt-separator--lg {
+        margin: 40px 0;
+    }
+
+    &.kt-separator--xl {
+        margin: 60px 0;
+    }
+
+    &.kt-separator--sm {
+        margin: 20px 0;
+    }
+
+    &.kt-separator--fit {
+        margin-left: -(kt-get($kt-portlet, space, desktop));
+        margin-right: -(kt-get($kt-portlet, space, desktop));
+    }
+
+    // States
+    @each $name, $color in $kt-state-colors {
+        &.kt-separator--#{$name} {
+            border-bottom: 1px solid kt-get($color, base);
+
+            &.kt-separator--dashed {
+                border-bottom: 1px dashed kt-get($color, base);
+            }
+        }
+    }
+}

@@ -1,0 +1,268 @@
+{
+    "config": {
+        "demo": "",
+        "debug": false,
+        "compile": {
+            "rtl": {
+                "enabled": true,
+                "skip": [
+                    "socicon",
+                    "line-awesome",
+                    "flaticon",
+                    "flaticon2",
+                    "fontawesome5"
+                ]
+            },
+            "jsUglify": false,
+            "cssMinify": false,
+            "jsSourcemaps": false,
+            "cssSourcemaps": false
+        },
+        "path": {
+            "src": "./../src",
+            "node_modules": "./node_modules",
+            "core_framework": "./../themes/framework",
+            "demo_api_url": "https://keenthemes.com/metronic/themes/themes/metronic/dist/preview/"
+        },
+        "dist": [
+            "./../dist/default/src/assets",
+            "./../dist/skeleton/src/assets"
+        ]
+    },
+    "build": {
+        "vendors": {
+            "base": {
+                "src": {
+                    "mandatory": {
+                        "popper.js": {
+                            "scripts": [
+                                "{$config.path.node_modules}/popper.js/dist/umd/popper.js"
+                            ]
+                        },
+                        "tooltip.js": {
+                            "scripts": [
+                                "{$config.path.node_modules}/tooltip.js/dist/umd/tooltip.min.js"
+                            ]
+                        },
+                        "perfect-scrollbar": {
+                            "styles": [
+                                "{$config.path.node_modules}/perfect-scrollbar/css/perfect-scrollbar.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/perfect-scrollbar/dist/perfect-scrollbar.js"
+                            ]
+                        }
+                    },
+                    "optional": {
+                        "socicon": {
+                            "styles": [
+                                "{$config.path.node_modules}/socicon/css/socicon.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.node_modules}/socicon/font/**"
+                            ]
+                        },
+                        "line-awesome": {
+                            "styles": [
+                                "{$config.path.src}/theme/framework/vendors/line-awesome/css/line-awesome.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/theme/framework/vendors/line-awesome/fonts/**"
+                            ]
+                        },
+                        "flaticon": {
+                            "styles": [
+                                "{$config.path.src}/theme/framework/vendors/flaticon/flaticon.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/theme/framework/vendors/flaticon/font/**"
+                            ]
+                        },
+                        "chartist": {
+                            "styles": [
+                                "{$config.path.node_modules}/chartist/dist/chartist.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/chartist/dist/chartist.js"
+                            ]
+                        },
+                        "flaticon2": {
+                            "styles": [
+                                "{$config.path.src}/theme/framework/vendors/flaticon2/flaticon.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/theme/framework/vendors/flaticon2/font/**"
+                            ]
+                        },
+                        "fontawesome5": {
+                            "styles": [
+                                "{$config.path.src}/theme/framework/vendors/fontawesome5/css/all.min.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/theme/framework/vendors/fontawesome5/webfonts/**"
+                            ]
+                        }
+                    }
+                },
+                "bundle": {
+                    "styles": "{$config.output}/vendors/base/vendors.bundle.css",
+                    "scripts": "{$config.output}/vendors/base/vendors.bundle.js",
+                    "images": "{$config.output}/vendors/base/images",
+                    "fonts": "{$config.output}/vendors/base/fonts"
+                }
+            },
+            "custom": []
+        },
+        "demo": {
+            "default": {
+                "base": {
+                    "src": {
+                        "media": [
+                            "{$config.path.src}/theme/demo/default/media/**/*.*"
+                        ],
+                        "styles": [
+                            "{$config.path.src}/theme/demo/default/sass/style-angular.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/theme/framework/lib/util.js",
+                            "{$config.path.src}/theme/framework/components/foundation/header/header.js",
+                            "{$config.path.src}/theme/framework/components/foundation/menu/menu.js",
+                            "{$config.path.src}/theme/framework/components/foundation/offcanvas/offcanvas.js",
+                            "{$config.path.src}/theme/framework/components/foundation/scrolltop/scrolltop.js",
+                            "{$config.path.src}/theme/framework/components/foundation/toggle/toggle.js",
+                            "{$config.path.src}/theme/framework/components/foundation/dialog/dialog.js",
+                            "{$config.path.src}/theme/framework/components/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/default/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/default/base/scripts.bundle.js"
+                    },
+                    "output": {
+                        "media": "{$config.output}/demo/default/media"
+                    }
+                },
+                "skins": {
+                    "header": {
+                        "src": {
+                            "styles": [
+                                "{$config.path.src}/theme/demo/default/sass/header/skins/**/*.scss"
+                            ]
+                        },
+                        "output": {
+                            "styles": "{$config.output}/demo/default/skins/header/"
+                        }
+                    },
+                    "brand": {
+                        "src": {
+                            "styles": [
+                                "{$config.path.src}/theme/demo/default/sass/brand/skins/**/*.scss"
+                            ]
+                        },
+                        "output": {
+                            "styles": "{$config.output}/demo/default/skins/brand/"
+                        }
+                    },
+                    "aside": {
+                        "src": {
+                            "styles": [
+                                "{$config.path.src}/theme/demo/default/sass/aside/skins/**/*.scss"
+                            ]
+                        },
+                        "output": {
+                            "styles": "{$config.output}/demo/default/skins/aside/"
+                        }
+                    }
+                }
+            },
+            "demo2": {
+                "base": {
+                    "src": {
+                        "media": [
+                            "{$config.path.src}/theme/demo/demo2/media/**/*.*"
+                        ],
+                        "styles": [
+                            "{$config.path.src}/theme/demo/demo2/sass/style-angular.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/theme/framework/lib/util.js",
+                            "{$config.path.src}/theme/framework/components/foundation/header/header.js",
+                            "{$config.path.src}/theme/framework/components/foundation/menu/menu.js",
+                            "{$config.path.src}/theme/framework/components/foundation/offcanvas/offcanvas.js",
+                            "{$config.path.src}/theme/framework/components/foundation/scrolltop/scrolltop.js",
+                            "{$config.path.src}/theme/framework/components/foundation/toggle/toggle.js",
+                            "{$config.path.src}/theme/framework/components/foundation/dialog/dialog.js",
+                            "{$config.path.src}/theme/framework/components/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo2/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo2/base/scripts.bundle.js"
+                    },
+                    "output": {
+                        "media": "{$config.output}/demo/demo2/media"
+                    }
+                }
+            },
+            "demo6": {
+                "base": {
+                    "src": {
+                        "media": [
+                            "{$config.path.src}/theme/demo/demo6/media/**/*.*"
+                        ],
+                        "styles": [
+                            "{$config.path.src}/theme/demo/demo6/sass/style-angular.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/theme/framework/lib/util.js",
+                            "{$config.path.src}/theme/framework/components/foundation/header/header.js",
+                            "{$config.path.src}/theme/framework/components/foundation/menu/menu.js",
+                            "{$config.path.src}/theme/framework/components/foundation/offcanvas/offcanvas.js",
+                            "{$config.path.src}/theme/framework/components/foundation/scrolltop/scrolltop.js",
+                            "{$config.path.src}/theme/framework/components/foundation/toggle/toggle.js",
+                            "{$config.path.src}/theme/framework/components/foundation/dialog/dialog.js",
+                            "{$config.path.src}/theme/framework/components/base/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.output}/demo/demo6/base/style.bundle.css",
+                        "scripts": "{$config.output}/demo/demo6/base/scripts.bundle.js"
+                    },
+                    "output": {
+                        "media": "{$config.output}/demo/demo6/media"
+                    }
+                }
+            }
+        },
+        "app": {
+            "custom": {
+                "src": {
+                    "styles-by-demo": [
+                        "{$config.path.src}/theme/app/custom/**/*.scss"
+                    ],
+                    "scripts": [
+                        "{$config.path.src}/theme/app/custom/**/*.js"
+                    ],
+                    "media": [
+                        "{$config.path.src}/media/**/*.*"
+                    ]
+                },
+                "output": {
+                    "styles-by-demo": "{$config.output}/app/custom/",
+                    "scripts": "{$config.output}/app/custom/",
+                    "media": "{$config.output}/media/"
+                }
+            },
+            "bundle": {
+                "src": {
+                    "scripts": [
+                        "{$config.path.src}/theme/app/bundle/**/*.js"
+                    ]
+                },
+                "bundle": {
+                    "scripts": "{$config.output}/app/bundle/app.bundle.js"
+                }
+            }
+        }
+    }
+}

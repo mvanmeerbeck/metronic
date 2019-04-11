@@ -1,0 +1,32 @@
+//
+// Config
+//
+
+
+
+$kt-input-icon: (
+	default: (
+		width: 3.2rem,
+		font-size: (
+			flaticon: 1.3em,
+			fontawesome: 1.2em,
+			lineawesome: 1.4em
+		)
+	),
+	lg: (
+		width: 4.2rem,
+		font-size: (
+			flaticon: 1.4em,
+			fontawesome: 1.3em,
+			lineawesome: 1.6em
+		)
+	),
+	sm: (
+		width: 2.7rem,
+		font-size: (
+			flaticon: 1em,
+			fontawesome: 1em,
+			lineawesome: 1.1em
+		)
+	)
+);

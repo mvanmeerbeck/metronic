@@ -1,0 +1,21 @@
+//
+// Loader Config
+//
+
+
+
+
+$kt-loader-config: (
+	default: (
+		size: 1.4rem,
+		width: 2px
+	),
+	lg: (
+		size: 2rem,
+		width: 3px 
+	),
+	sm: (
+		size: 1rem,
+		width: 1px
+	)
+);

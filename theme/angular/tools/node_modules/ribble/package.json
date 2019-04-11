@@ -1,0 +1,42 @@
+{
+  "name": "ribble",
+  "description": "Material ripple effect with ease (Vanilla js, works also as a Vue.js directive)",
+  "version": "1.0.4",
+  "main": "dist/ribble.js",
+  "module": "src/Ribble.js",
+  "author": {
+    "name": "Honoré Nintunze",
+    "email": "nintu.lab@gmail.com",
+    "url": "https://nintu.me",
+    "twitter": "https://twitter.com/nash_403"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nash403/ribble.git"
+  },
+  "homepage": "https://github.com/nash403/ribble#readme",
+  "bugs": {
+    "url": "https://github.com/nash403/ribble/issues"
+  },
+  "keywords": [
+    "vuejs",
+    "ripple",
+    "ripple-effect",
+    "material",
+    "vanilla"
+  ],
+  "scripts": {
+    "dev": "webpack --progress --hide-modules",
+    "start": "yarn dev",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.3",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.10.0"
+  }
+}
