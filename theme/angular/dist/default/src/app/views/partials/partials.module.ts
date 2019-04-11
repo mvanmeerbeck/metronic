@@ -50,6 +50,7 @@ import {
 	Subheader1Component,
 	Subheader2Component,
 	Subheader3Component,
+	SubheaderSearchComponent,
 	UserProfile2Component,
 	UserProfileComponent,
 } from './layout';
@@ -85,6 +86,7 @@ import { CartComponent } from './layout/topbar/cart/cart.component';
 		Subheader1Component,
 		Subheader2Component,
 		Subheader3Component,
+		SubheaderSearchComponent,
 		LanguageSelectorComponent,
 		NotificationComponent,
 		QuickActionComponent,
@@ -119,6 +121,7 @@ import { CartComponent } from './layout/topbar/cart/cart.component';
 		Subheader1Component,
 		Subheader2Component,
 		Subheader3Component,
+		SubheaderSearchComponent,
 		LanguageSelectorComponent,
 		NotificationComponent,
 		QuickActionComponent,

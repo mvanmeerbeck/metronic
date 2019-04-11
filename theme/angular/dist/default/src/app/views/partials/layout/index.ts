@@ -11,6 +11,7 @@ export { StickyToolbarComponent } from './sticky-toolbar/sticky-toolbar.componen
 export { Subheader1Component } from './subheader/subheader1/subheader1.component';
 export { Subheader2Component } from './subheader/subheader2/subheader2.component';
 export { Subheader3Component } from './subheader/subheader3/subheader3.component';
+export { SubheaderSearchComponent } from './subheader/subheader-search/subheader-search.component';
 
 // Topbar components
 export { LanguageSelectorComponent } from './topbar/language-selector/language-selector.component';
